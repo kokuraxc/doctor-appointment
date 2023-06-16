@@ -25,4 +25,4 @@ Appointment | `PUT /appointments` | for a doctor to complete or cancel the appoi
 Patient | `POST /patients` | to add a patient
 Patient | `GET /patients` | to get all the patients
 
-> By right, need to create these three microservices. To make is simple, here I'm putting them into one single microservice, turning inter-microservice communication into intra-microservice communication.
+> By right, need to create these three microservices. To make is simple, here I'm putting them into one single microservice, creating an **aggregate** for each of them.
