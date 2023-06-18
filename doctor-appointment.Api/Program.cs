@@ -1,10 +1,12 @@
-using doctor_appointment.Application.Services.Slots;
+using doctor_appointment.Application;
+using doctor_appointment.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 {
-    builder.Services.AddScoped<ISlotsService, SlotsService>();
+    builder.Services.AddApplication()
+        .AddInfrastructure();
     builder.Services.AddControllers();
 }
 

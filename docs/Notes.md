@@ -66,6 +66,10 @@ The technologies and libraries that used for each layer.
 
 
 - Install **C# Namespace Autocompletion** extension so as to automatically fill the namespace.
+- Install **NuGet Reverse Package Search ("Add Package" support)** extension, find the package name with this extension
+- Add project dependency packages.
+    - `dotnet add .\doctor-appointment.Application\ package Microsoft.Extensions.DependencyInjection.Abstractions`
+- 
 
 ### Code the project
 
@@ -74,6 +78,6 @@ The technologies and libraries that used for each layer.
 3. Create the Application service
 4. Set up Dependency Injection in program.cs. 
     - `builder.Services.AddScoped<ISlotsService, SlotsService>();`
-5. 
+5. Add dependenci injection in each project independently with the help from *Microsoft.Extensions.DependencyInjection.Abstractions*.
 
 To trust the certificate run 'dotnet dev-certs https --trust' (Windows and macOS only)
