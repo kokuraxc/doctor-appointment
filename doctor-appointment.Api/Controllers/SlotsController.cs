@@ -21,11 +21,11 @@ public class SlotsController : ControllerBase
     {
         var slots = _slotsService.GetAllSlots();
         var response = slots.Select(slot => new CreateSlotResponse(
-            slot.Id,
-            slot.StartDate,
-            slot.DoctorName,
-            slot.IsReserved,
-            slot.Cost
+            slot.slot.Id,
+            slot.slot.StartDate,
+            slot.slot.DoctorName!,
+            slot.slot.IsReserved,
+            slot.slot.Cost
         ));
 
         return Ok(response);
@@ -37,11 +37,11 @@ public class SlotsController : ControllerBase
     {
         var slots = _slotsService.GetAvailableSlots();
         var response = slots.Select(slot => new CreateSlotResponse(
-            slot.Id,
-            slot.StartDate,
-            slot.DoctorName,
-            slot.IsReserved,
-            slot.Cost
+            slot.slot.Id,
+            slot.slot.StartDate,
+            slot.slot.DoctorName!,
+            slot.slot.IsReserved,
+            slot.slot.Cost
         ));
 
         return Ok(response);
@@ -51,7 +51,7 @@ public class SlotsController : ControllerBase
     public IActionResult CreateSlot(CreateSlotRequest request)
     {
         var slot = _slotsService.CreateSlot(request.StartDate, request.DoctorName, request.IsReserved, request.Cost);
-        var response = new CreateSlotResponse(slot.Id, slot.StartDate, slot.DoctorName, slot.IsReserved, slot.Cost);
+        var response = new CreateSlotResponse(slot.slot.Id, slot.slot.StartDate, slot.slot.DoctorName!, slot.slot.IsReserved, slot.slot.Cost);
         return Ok(response);
     }
 }

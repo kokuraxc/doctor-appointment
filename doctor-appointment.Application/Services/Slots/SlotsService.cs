@@ -1,26 +1,46 @@
+using doctor_appointment.Application.Common;
+using doctor_appointment.Domain.Entities;
+
 namespace doctor_appointment.Application.Services.Slots;
 
 public class SlotsService : ISlotsService
 {
+    private readonly ISlotRepository _slotsRepository;
+
+    public SlotsService(ISlotRepository slotsRepository)
+    {
+        _slotsRepository = slotsRepository;
+    }
+
     public CreateSlotResult CreateSlot(DateTime startDate, string doctorName, bool isReserved, decimal cost)
     {
-        return new CreateSlotResult(Guid.NewGuid(), startDate, doctorName, isReserved, cost);
+        if (_slotsRepository.GetSlotByDateTime(startDate) is not null)
+        {
+            throw new Exception("Slot already exists at {dateTime}");
+        }
+
+        var slot = new Slot
+        {
+            StartDate = startDate,
+            DoctorName = doctorName,
+            IsReserved = isReserved,
+            Cost = cost
+        };
+
+        _slotsRepository.Add(slot);
+
+        return new CreateSlotResult(slot);
     }
 
     public List<CreateSlotResult> GetAllSlots()
     {
-        return new List<CreateSlotResult>{
-            new CreateSlotResult(Guid.NewGuid(), DateTime.Now, "doctor Name 1", false, (decimal)12.34),
-            new CreateSlotResult(Guid.NewGuid(), DateTime.Now, "doctor Name 2", false, (decimal)98.34),
-            new CreateSlotResult(Guid.NewGuid(), DateTime.Now, "doctor Name 3", true, (decimal)98.34),
-        };
+        var slots = _slotsRepository.GetAllSlots();
+        return slots.Select(s => new CreateSlotResult(s)).ToList();
     }
 
     public List<CreateSlotResult> GetAvailableSlots()
     {
-        return new List<CreateSlotResult>{
-            new CreateSlotResult(Guid.NewGuid(), DateTime.Now, "doctor Name 1", true, (decimal)12.34),
-            new CreateSlotResult(Guid.NewGuid(), DateTime.Now, "doctor Name 2", false, (decimal)98.34),
-        };
+        var slots = _slotsRepository.GetAvailableSlots();
+        return slots.Select(s => new CreateSlotResult(s)).ToList();
     }
 }
