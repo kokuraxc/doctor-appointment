@@ -1,17 +1,19 @@
-GET http://localhost:5250/Slots
+@host=http://localhost:5250
+
+GET {{host}}/Slots
 
 ###
 
-GET http://localhost:5250/Slots/available
+GET {{host}}/Slots/available
 
 ###
 
-POST http://localhost:5250/Slots
+POST {{host}}/Slots
 Content-Type: application/json
 
 {
     "StartDate": "2015-10-10T00:00:00",
     "DoctorName": "Guo Zhengjin",
     "IsReserved": false,
-    "Cost": 56.78
+    "Cost": 56.782
 }

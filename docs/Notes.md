@@ -67,5 +67,13 @@ The technologies and libraries that used for each layer.
 
 - Install **C# Namespace Autocompletion** extension so as to automatically fill the namespace.
 
+### Code the project
+
+1. Start from the Contracts
+2. Then create controllers in API
+3. Create the Application service
+4. Set up Dependency Injection in program.cs. 
+    - `builder.Services.AddScoped<ISlotsService, SlotsService>();`
+5. 
 
 To trust the certificate run 'dotnet dev-certs https --trust' (Windows and macOS only)
