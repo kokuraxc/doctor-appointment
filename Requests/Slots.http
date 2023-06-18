@@ -13,7 +13,7 @@ Content-Type: application/json
 
 {
     "StartDate": "2015-10-10T00:00:00",
-    "DoctorName": "Guo Zhengjin",
+    "DoctorName": "doctor x",
     "IsReserved": false,
     "Cost": 56.782
 }
