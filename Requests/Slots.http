@@ -1,0 +1,17 @@
+GET http://localhost:5250/Slots
+
+###
+
+GET http://localhost:5250/Slots/available
+
+###
+
+POST http://localhost:5250/Slots
+Content-Type: application/json
+
+{
+    "StartDate": "2015-10-10T00:00:00",
+    "DoctorName": "Guo Zhengjin",
+    "IsReserved": false,
+    "Cost": 56.78
+}

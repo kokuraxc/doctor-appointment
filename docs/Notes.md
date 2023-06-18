@@ -65,4 +65,7 @@ The technologies and libraries that used for each layer.
     1. `dotnet run --project *Api` to run the Api project
 
 
+- Install **C# Namespace Autocompletion** extension so as to automatically fill the namespace.
+
+
 To trust the certificate run 'dotnet dev-certs https --trust' (Windows and macOS only)

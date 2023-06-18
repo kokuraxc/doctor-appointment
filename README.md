@@ -15,9 +15,9 @@ Below is the interaction of the components in the system and the APIs.
 Microservice | Endpoint | Description
 --- | --- | ---
 Slot | `GET /slots` | for doctor to list all slots
-Slot | `GET /slots/patient` | for patient to view available slots
+Slot | `GET /slots/available` | to get available slots (mainly used by patients)
 Slot | `POST /slots` | for doctor to create a new slot
-Slot | `PUT /slots` | for Appointment microservice to update the slot
+<s>Slot</s> | <s>`PUT /slots`</s> | <s>for Appointment microservice to update the slot</s>
 Appointment | `GET /appointments` | to list all Appointments
 Appointment | `GET /appointments/doctor` | for doctor to view upcoming Appointments
 Appointment | `GET /appointments/patient/<patient_id>` | for a patient to view upcoming Appointments
