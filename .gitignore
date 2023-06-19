@@ -41,3 +41,6 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+doctor-appointment.Api/db.db-wal
+doctor-appointment.Api/db.db-shm
+doctor-appointment.Api/db.db
