@@ -17,41 +17,24 @@ public class SlotsController : ControllerBase
 
     [Route("")]
     [HttpGet]
-    public IActionResult GetAllSlots()
+    public async Task<IActionResult> GetAllSlotsAsync()
     {
-        var slots = _slotsService.GetAllSlots();
-        var response = slots.Select(slot => new CreateSlotResponse(
-            slot.slot.Id,
-            slot.slot.StartDate,
-            slot.slot.DoctorName!,
-            slot.slot.IsReserved,
-            slot.slot.Cost
-        ));
-
-        return Ok(response);
+        var slots = await _slotsService.GetAllSlotsAsync();
+        return Ok(slots);
     }
 
     [Route("available")]
     [HttpGet]
-    public IActionResult GetAvailableSlots()
+    public async Task<IActionResult> GetAvailableSlotsAsync()
     {
-        var slots = _slotsService.GetAvailableSlots();
-        var response = slots.Select(slot => new CreateSlotResponse(
-            slot.slot.Id,
-            slot.slot.StartDate,
-            slot.slot.DoctorName!,
-            slot.slot.IsReserved,
-            slot.slot.Cost
-        ));
-
-        return Ok(response);
+        var slots = await _slotsService.GetAvailableSlotsAsync();
+        return Ok(slots);
     }
 
     [HttpPost]
-    public IActionResult CreateSlot(CreateSlotRequest request)
+    public async Task<IActionResult> CreateSlotAsync(CreateSlotRequest request)
     {
-        var slot = _slotsService.CreateSlot(request.StartDate, request.DoctorName, request.IsReserved, request.Cost);
-        var response = new CreateSlotResponse(slot.slot.Id, slot.slot.StartDate, slot.slot.DoctorName!, slot.slot.IsReserved, slot.slot.Cost);
-        return Ok(response);
+        var slot = await _slotsService.CreateSlotAsync(request);
+        return Ok(slot);
     }
 }

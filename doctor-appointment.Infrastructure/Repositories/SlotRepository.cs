@@ -1,5 +1,6 @@
 using doctor_appointment.Domain.Entities;
 using doctor_appointment.Domain.IRepositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace doctor_appointment.Infrastructure.Repositories;
 
@@ -12,24 +13,25 @@ public class SlotRepository : ISlotRepository
         _dbContext = dbContext;
     }
 
-    public void Add(Slot slot)
+    public async Task<Slot> AddAsync(Slot slot)
     {
-        _dbContext.Slots.Add(slot);
-        _dbContext.SaveChanges();
+        await _dbContext.Slots.AddAsync(slot);
+        await _dbContext.SaveChangesAsync();
+        return slot;
     }
 
-    public List<Slot> GetAllSlots()
+    public async Task<List<Slot>> GetAllSlotsAsync()
     {
-        return _dbContext.Slots.ToList();
+        return await _dbContext.Slots.ToListAsync();
     }
 
-    public List<Slot> GetAvailableSlots()
+    public async Task<List<Slot>> GetAvailableSlotsAsync()
     {
-        return _dbContext.Slots.Where(s => !s.IsReserved).ToList();
+        return await _dbContext.Slots.Where(s => !s.IsReserved).ToListAsync();
     }
 
-    public Slot? GetSlotByDateTime(DateTime dt)
+    public async Task<Slot?> GetSlotByDateTimeAsync(DateTime dt)
     {
-        return _dbContext.Slots.FirstOrDefault(s => s.StartDate == dt);
+        return await _dbContext.Slots.FirstOrDefaultAsync(s => s.StartDate == dt);
     }
 }

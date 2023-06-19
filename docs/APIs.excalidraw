@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 192,
-      "versionNonce": 1517656506,
+      "version": 193,
+      "versionNonce": 2048651814,
       "isDeleted": false,
       "id": "2KELVHdhbaZdM6TqNvf5U",
       "fillStyle": "hachure",
@@ -25,7 +25,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762475,
+      "updated": 1687160064890,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -36,12 +36,12 @@
       "containerId": null,
       "originalText": "GET: /slots",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 146,
-      "versionNonce": 1687516902,
+      "version": 147,
+      "versionNonce": 997206842,
       "isDeleted": false,
       "id": "jr9RbHA4Ccy8Ztt-u3Od8",
       "fillStyle": "hachure",
@@ -60,7 +60,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762476,
+      "updated": 1687160064891,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -71,12 +71,12 @@
       "containerId": null,
       "originalText": "POST: /slots",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 200,
-      "versionNonce": 1926124154,
+      "version": 201,
+      "versionNonce": 325500262,
       "isDeleted": false,
       "id": "E0erqDAqyU6A4MPtiUYpz",
       "fillStyle": "hachure",
@@ -95,7 +95,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762479,
+      "updated": 1687160064893,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -106,12 +106,12 @@
       "containerId": null,
       "originalText": "GET: /patients",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 251,
-      "versionNonce": 634497574,
+      "version": 252,
+      "versionNonce": 1232778234,
       "isDeleted": false,
       "id": "qTjiyLnFocW4IsH6NlEk4",
       "fillStyle": "hachure",
@@ -130,7 +130,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762479,
+      "updated": 1687160064894,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -141,12 +141,12 @@
       "containerId": null,
       "originalText": "POST: /patients",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 663,
-      "versionNonce": 420606778,
+      "version": 664,
+      "versionNonce": 666247334,
       "isDeleted": false,
       "id": "ArcZJ0HrZr1cMppgCqQVt",
       "fillStyle": "hachure",
@@ -165,7 +165,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762491,
+      "updated": 1687160064899,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -176,12 +176,12 @@
       "containerId": null,
       "originalText": "CONSIDERATIONS: \n1. two different microservices? one for DOCTOR, another for PATIENTS\n2. maybe don't need a microservice for DOCTOR, \n   because this system will only cater for a specific single doctor\n3. also don't need the PATIENT microservice as well. but to make an\n   appointment, need a patient's Guid. so just create the PATIENT\n   microservice to get the Guid easily",
       "lineHeight": 1.2,
-      "baseline": 163
+      "baseline": 162
     },
     {
       "type": "text",
-      "version": 284,
-      "versionNonce": 799372646,
+      "version": 285,
+      "versionNonce": 1857430714,
       "isDeleted": false,
       "id": "OntCPaJbpT1Y_wj41rMJx",
       "fillStyle": "hachure",
@@ -200,7 +200,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762492,
+      "updated": 1687160064900,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -211,12 +211,12 @@
       "containerId": null,
       "originalText": "GET: /appointments",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 220,
-      "versionNonce": 530807802,
+      "version": 221,
+      "versionNonce": 448207846,
       "isDeleted": false,
       "id": "lOWE7wmuFvypNfaHyewzq",
       "fillStyle": "hachure",
@@ -235,7 +235,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762494,
+      "updated": 1687160064901,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -246,7 +246,7 @@
       "containerId": null,
       "originalText": "PUT: /appointments ",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "rectangle",
@@ -299,8 +299,8 @@
     },
     {
       "type": "text",
-      "version": 203,
-      "versionNonce": 996006054,
+      "version": 204,
+      "versionNonce": 1690664314,
       "isDeleted": false,
       "id": "25-SXslA5A8GXLcqzMXh0",
       "fillStyle": "hachure",
@@ -319,7 +319,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762497,
+      "updated": 1687160064903,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -330,7 +330,7 @@
       "containerId": "ME5GPTfyVIJ1K9Go1TdQt",
       "originalText": "SLOT microservice",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "rectangle",
@@ -375,8 +375,8 @@
     },
     {
       "type": "text",
-      "version": 357,
-      "versionNonce": 344321210,
+      "version": 358,
+      "versionNonce": 1383509798,
       "isDeleted": false,
       "id": "4yvE9sDissxJs3BiAEJSk",
       "fillStyle": "hachure",
@@ -395,7 +395,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762497,
+      "updated": 1687160064905,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -406,7 +406,7 @@
       "containerId": "0eAvFawEhFmWzLXWWcSOv",
       "originalText": "PATIENT microservice",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "rectangle",
@@ -459,8 +459,8 @@
     },
     {
       "type": "text",
-      "version": 174,
-      "versionNonce": 1353176038,
+      "version": 175,
+      "versionNonce": 954973754,
       "isDeleted": false,
       "id": "jSQpkt9CtOFMTlZB3Fz_N",
       "fillStyle": "hachure",
@@ -479,7 +479,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762498,
+      "updated": 1687160064906,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -490,12 +490,12 @@
       "containerId": "g88T4AifOOGzCibgq4Wbj",
       "originalText": "APPOINTMENT microservice",
       "lineHeight": 1.25,
-      "baseline": 42
+      "baseline": 43
     },
     {
       "type": "text",
-      "version": 120,
-      "versionNonce": 1297892730,
+      "version": 121,
+      "versionNonce": 1801575014,
       "isDeleted": false,
       "id": "KgjsVtVs_IfgookzypYcX",
       "fillStyle": "hachure",
@@ -516,7 +516,7 @@
       ],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762499,
+      "updated": 1687160064907,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -527,7 +527,7 @@
       "containerId": null,
       "originalText": "DOCTOR",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "ellipse",
@@ -578,8 +578,8 @@
     },
     {
       "type": "text",
-      "version": 225,
-      "versionNonce": 2039506726,
+      "version": 226,
+      "versionNonce": 1477175034,
       "isDeleted": false,
       "id": "c1M0DiT0JhNvVOU8zgyw4",
       "fillStyle": "hachure",
@@ -600,7 +600,7 @@
       ],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762499,
+      "updated": 1687160064907,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -611,7 +611,7 @@
       "containerId": null,
       "originalText": "PATIENT",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "ellipse",
@@ -710,8 +710,8 @@
     },
     {
       "type": "text",
-      "version": 40,
-      "versionNonce": 1936295482,
+      "version": 41,
+      "versionNonce": 1816501670,
       "isDeleted": false,
       "id": "uyOfwRREjIIyUeaMArCry",
       "fillStyle": "hachure",
@@ -730,7 +730,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762500,
+      "updated": 1687160064909,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -741,7 +741,7 @@
       "containerId": "DcZ4voSZi_RUcjRJR-hC8",
       "originalText": "add a new slot",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -801,8 +801,8 @@
     },
     {
       "type": "text",
-      "version": 36,
-      "versionNonce": 1988399718,
+      "version": 37,
+      "versionNonce": 447281082,
       "isDeleted": false,
       "id": "zWe0Gtydzq9QnriAcBKPd",
       "fillStyle": "hachure",
@@ -821,7 +821,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762501,
+      "updated": 1687160064909,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -832,7 +832,7 @@
       "containerId": "cQg9uwsVsJyeshl8OgO1a",
       "originalText": "list slots",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -892,8 +892,8 @@
     },
     {
       "type": "text",
-      "version": 46,
-      "versionNonce": 261140218,
+      "version": 47,
+      "versionNonce": 2051995878,
       "isDeleted": false,
       "id": "hauiZyuGEvzRzZsmCkt8x",
       "fillStyle": "hachure",
@@ -912,7 +912,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762501,
+      "updated": 1687160064910,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -923,7 +923,7 @@
       "containerId": "kyHrEbS2okiJR4VtL0Z8S",
       "originalText": "view available slots",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -983,8 +983,8 @@
     },
     {
       "type": "text",
-      "version": 45,
-      "versionNonce": 1917932966,
+      "version": 46,
+      "versionNonce": 1357246586,
       "isDeleted": false,
       "id": "k66xeXtN9976hj3Qc33CO",
       "fillStyle": "hachure",
@@ -1003,7 +1003,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762502,
+      "updated": 1687160064910,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1014,7 +1014,7 @@
       "containerId": "iHF2O4Vs3zDuyUB89cEzU",
       "originalText": "book an appointment",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -1133,8 +1133,8 @@
     },
     {
       "type": "text",
-      "version": 114,
-      "versionNonce": 374652858,
+      "version": 115,
+      "versionNonce": 218819622,
       "isDeleted": false,
       "id": "X7NmPhAjdqdPstNpKxYYy",
       "fillStyle": "hachure",
@@ -1153,7 +1153,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762503,
+      "updated": 1687160064911,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1164,7 +1164,7 @@
       "containerId": "SIOvMDH1znH_AS5P73RhF",
       "originalText": "view upcoming appointments",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -1228,8 +1228,8 @@
     },
     {
       "type": "text",
-      "version": 95,
-      "versionNonce": 908308710,
+      "version": 96,
+      "versionNonce": 1317392698,
       "isDeleted": false,
       "id": "uznkDz0ot8hqnP122cqK1",
       "fillStyle": "hachure",
@@ -1248,7 +1248,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762503,
+      "updated": 1687160064912,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1259,12 +1259,12 @@
       "containerId": "fGNMHPhBECL2oCEPp9BkP",
       "originalText": "update an appointment\n(complete or cancel)",
       "lineHeight": 1.25,
-      "baseline": 42
+      "baseline": 43
     },
     {
       "type": "text",
-      "version": 390,
-      "versionNonce": 1943582842,
+      "version": 391,
+      "versionNonce": 577140582,
       "isDeleted": false,
       "id": "OkPwMRuIszOXMyD3zAEHu",
       "fillStyle": "hachure",
@@ -1292,7 +1292,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1687066762504,
+      "updated": 1687160064913,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1303,7 +1303,7 @@
       "containerId": null,
       "originalText": "helper microservice, to get all the patients\nso as to have the Guid for a patient.\nmanually add some patients before hand",
       "lineHeight": 1.25,
-      "baseline": 67
+      "baseline": 68
     },
     {
       "type": "arrow",
@@ -1367,8 +1367,8 @@
     },
     {
       "type": "text",
-      "version": 90,
-      "versionNonce": 1569236006,
+      "version": 91,
+      "versionNonce": 1995151866,
       "isDeleted": false,
       "id": "eiGFtgzIGRvlg5exssiAB",
       "fillStyle": "hachure",
@@ -1387,7 +1387,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762504,
+      "updated": 1687160064914,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1398,7 +1398,7 @@
       "containerId": "ftRawXeeulbObdcP5goAT",
       "originalText": "add a patient",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -1462,8 +1462,8 @@
     },
     {
       "type": "text",
-      "version": 92,
-      "versionNonce": 400529722,
+      "version": 93,
+      "versionNonce": 1924045478,
       "isDeleted": false,
       "id": "heUsi8XErQVnxMMFSgv16",
       "fillStyle": "hachure",
@@ -1482,7 +1482,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762505,
+      "updated": 1687160064914,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1493,12 +1493,12 @@
       "containerId": "XVNlJd6MJ0MTvHqHdr8JJ",
       "originalText": "get all patient",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 179,
-      "versionNonce": 174927718,
+      "version": 180,
+      "versionNonce": 1226459834,
       "isDeleted": false,
       "id": "DZ6ztjD4XJoVCJ8hUkUPz",
       "fillStyle": "hachure",
@@ -1517,7 +1517,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762505,
+      "updated": 1687160064914,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1528,7 +1528,7 @@
       "containerId": null,
       "originalText": "PUT: /slots",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "ellipse",
@@ -2012,8 +2012,8 @@
     },
     {
       "type": "text",
-      "version": 284,
-      "versionNonce": 30171642,
+      "version": 285,
+      "versionNonce": 613438950,
       "isDeleted": false,
       "id": "-cVeZQOc2fIyVHZGVLTT4",
       "fillStyle": "hachure",
@@ -2032,7 +2032,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762506,
+      "updated": 1687160064915,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2043,12 +2043,12 @@
       "containerId": null,
       "originalText": "GET: /appointments/patient/<patinet_id>",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 244,
-      "versionNonce": 421417638,
+      "version": 245,
+      "versionNonce": 1807016826,
       "isDeleted": false,
       "id": "wfjiFLsOY9Zz1h4xMpJp2",
       "fillStyle": "hachure",
@@ -2067,7 +2067,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762507,
+      "updated": 1687160064916,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2078,7 +2078,7 @@
       "containerId": null,
       "originalText": "GET: /slots/available",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "line",
@@ -2125,8 +2125,8 @@
     },
     {
       "type": "text",
-      "version": 372,
-      "versionNonce": 1285690042,
+      "version": 373,
+      "versionNonce": 18393382,
       "isDeleted": false,
       "id": "lvFzArZvggEzO91zbFWlw",
       "fillStyle": "hachure",
@@ -2145,7 +2145,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1687066762507,
+      "updated": 1687160064916,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2156,7 +2156,7 @@
       "containerId": null,
       "originalText": "GET: /appointments/doctor",
       "lineHeight": 1.2,
-      "baseline": 19
+      "baseline": 18
     },
     {
       "type": "line",

@@ -4,8 +4,8 @@ namespace doctor_appointment.Domain.IRepositories;
 
 public interface ISlotRepository
 {
-    void Add(Slot slot);
-    Slot? GetSlotByDateTime(DateTime dt);
-    List<Slot> GetAllSlots();
-    List<Slot> GetAvailableSlots();
+    Task<Slot> AddAsync(Slot slot);
+    Task<Slot?> GetSlotByDateTimeAsync(DateTime dt);
+    Task<List<Slot>> GetAllSlotsAsync();
+    Task<List<Slot>> GetAvailableSlotsAsync();
 }

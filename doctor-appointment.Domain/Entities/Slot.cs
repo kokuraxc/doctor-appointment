@@ -6,5 +6,13 @@ public class Slot
     public DateTime StartDate { get; set; }
     public string? DoctorName { get; set; }
     public bool IsReserved { get; set; }
-    public Decimal Cost { get; set; }
+    public decimal Cost { get; set; }
+
+    public void BookSlot(){
+        this.IsReserved = true;
+    }
+
+    public void CancelBooking(){
+        this.IsReserved = false;
+    }
 }

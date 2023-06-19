@@ -6,5 +6,5 @@ public record CreateSlotResponse(
     // Guid DoctorId, // only one doctor, get rid of this Guid for now
     string DoctorName,
     bool IsReserved,
-    Decimal Cost
+    decimal Cost
 );

@@ -1,3 +1,4 @@
+using doctor_appointment.Contracts.Slot;
 using doctor_appointment.Domain.Entities;
 using doctor_appointment.Domain.IRepositories;
 
@@ -12,35 +13,34 @@ public class SlotsService : ISlotsService
         _slotsRepository = slotsRepository;
     }
 
-    public CreateSlotResult CreateSlot(DateTime startDate, string doctorName, bool isReserved, decimal cost)
+    public async Task<CreateSlotResponse> CreateSlotAsync(CreateSlotRequest request)
     {
-        if (_slotsRepository.GetSlotByDateTime(startDate) is not null)
+        if (await _slotsRepository.GetSlotByDateTimeAsync(request.StartDate) is not null)
         {
-            throw new Exception("Slot already exists at " + startDate.ToString());
+            throw new Exception("Slot already exists at " + request.StartDate.ToString());
         }
 
         var slot = new Slot
         {
-            StartDate = startDate,
-            DoctorName = doctorName,
-            IsReserved = isReserved,
-            Cost = cost
+            StartDate = request.StartDate,
+            DoctorName = request.DoctorName,
+            IsReserved = request.IsReserved,
+            Cost = request.Cost
         };
 
-        _slotsRepository.Add(slot);
-
-        return new CreateSlotResult(slot);
+        slot =  await _slotsRepository.AddAsync(slot);
+        return new CreateSlotResponse(slot.Id, slot.StartDate, slot.DoctorName!, slot.IsReserved, slot.Cost);
     }
 
-    public List<CreateSlotResult> GetAllSlots()
+    public async Task<List<CreateSlotResponse>> GetAllSlotsAsync()
     {
-        var slots = _slotsRepository.GetAllSlots();
-        return slots.Select(s => new CreateSlotResult(s)).ToList();
+        var slots = await _slotsRepository.GetAllSlotsAsync();
+        return slots.Select(slot => new CreateSlotResponse(slot.Id, slot.StartDate, slot.DoctorName!, slot.IsReserved, slot.Cost)).ToList();
     }
 
-    public List<CreateSlotResult> GetAvailableSlots()
+    public async Task<List<CreateSlotResponse>> GetAvailableSlotsAsync()
     {
-        var slots = _slotsRepository.GetAvailableSlots();
-        return slots.Select(s => new CreateSlotResult(s)).ToList();
+        var slots = await _slotsRepository.GetAvailableSlotsAsync();
+        return slots.Select(slot => new CreateSlotResponse(slot.Id, slot.StartDate, slot.DoctorName!, slot.IsReserved, slot.Cost)).ToList();
     }
 }
