@@ -1,5 +1,5 @@
-using doctor_appointment.Application.Common;
 using doctor_appointment.Domain.Entities;
+using doctor_appointment.Domain.IRepositories;
 
 namespace doctor_appointment.Infrastructure.Repositories;
 

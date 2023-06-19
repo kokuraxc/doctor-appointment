@@ -1,4 +1,4 @@
-using doctor_appointment.Application.Common;
+using doctor_appointment.Domain.IRepositories;
 using doctor_appointment.Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
