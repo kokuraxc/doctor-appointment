@@ -64,11 +64,14 @@ The technologies and libraries that used for each layer.
 9. Tese the **WeatherForcastController** in the Api project
     1. `dotnet run --project *Api` to run the Api project
 
+### VS Code Extensions
 
 - Install **C# Namespace Autocompletion** extension so as to automatically fill the namespace.
 - Install **NuGet Reverse Package Search ("Add Package" support)** extension, find the package name with this extension
 - Add project dependency packages.
     - `dotnet add .\doctor-appointment.Application\ package Microsoft.Extensions.DependencyInjection.Abstractions`
+- .Net Watch: for hot reload
+  - `dotnet watch --project *API`
 - 
 
 ### Code the project

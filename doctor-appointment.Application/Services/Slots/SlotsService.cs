@@ -16,7 +16,7 @@ public class SlotsService : ISlotsService
     {
         if (_slotsRepository.GetSlotByDateTime(startDate) is not null)
         {
-            throw new Exception("Slot already exists at {dateTime}");
+            throw new Exception("Slot already exists at " + startDate.ToString());
         }
 
         var slot = new Slot
