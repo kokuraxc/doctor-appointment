@@ -35,3 +35,5 @@ Patient | `GET /patients` | to get all the patients
 
 
 [The API specification](./docs/API.md)
+
+[The project folder structure and setup](./docs/Notes.md)
