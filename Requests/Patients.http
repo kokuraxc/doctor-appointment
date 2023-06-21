@@ -1,0 +1,13 @@
+@host=http://localhost:5250
+
+### Get all patients
+GET {{host}}/Patients
+
+### Create a new patient
+POST {{host}}/Patients
+Content-Type: application/json
+
+{
+    "FirstName" : "123",
+    "LastName" : "Patient"
+}

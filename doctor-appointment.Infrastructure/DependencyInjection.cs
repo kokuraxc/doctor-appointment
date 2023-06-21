@@ -11,6 +11,8 @@ public static class DependencyInjection
     {
         services.AddDbContext<DoctorAppointmentContext>(options => options.UseSqlite(connectionString));
         services.AddScoped<ISlotRepository, SlotRepository>();
+        services.AddScoped<IPatientRepository, PatientRepository>();
+        services.AddScoped<IAppointmentRepository, AppointmentRepository>();
         return services;
     }
 }

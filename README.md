@@ -1,5 +1,11 @@
 # Doctor Appointment System
 
+## Run
+
+1. `dotnet build`
+2. `dotnet run --project .\doctor-appointment.Api\`
+3.  Test the endpoints from ***Requests*** folder
+
 ## Design and considerations
 There will be three microservices:
 1. Slot
@@ -25,4 +31,7 @@ Appointment | `PUT /appointments` | for a doctor to complete or cancel the appoi
 Patient | `POST /patients` | to add a patient
 Patient | `GET /patients` | to get all the patients
 
-> By right, need to create these three microservices. To make is simple, here I'm putting them into one single microservice, creating an **aggregate** for each of them.
+> **By right, need to create these three as microservices. To make is simple, here I'm putting them into one single microservice, creating an *aggregate* for each of them.**
+
+
+[The API specification](./docs/API.md)

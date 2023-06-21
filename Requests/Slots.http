@@ -1,19 +1,18 @@
 @host=http://localhost:5250
 
+### Get all slots
 GET {{host}}/Slots
 
-###
-
+### Get available slots
 GET {{host}}/Slots/available
 
-###
-
+### Create a new slot
 POST {{host}}/Slots
 Content-Type: application/json
 
 {
-    "StartDate": "2023-11-10T00:00:00",
+    "StartDate": "2023-07-10T10:00:00",
     "DoctorName": "doctor Y",
-    "IsReserved": true,
+    "IsReserved": false,
     "Cost": 56.782
 }

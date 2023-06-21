@@ -1,0 +1,27 @@
+@host=http://localhost:5250
+@appointmentId=80e7f95d-2f57-42bb-b98f-dcb776bbec5a
+@patientId=63090b84-7bf1-490e-af28-4c5ecec8d5fe
+
+### Create a new appointment
+POST {{host}}/Appointments
+Content-Type: application/json
+
+{
+    "SlotId": "af677d4a-8459-433a-ace5-bc7ccae86c95",
+    "PatientId": "63090b84-7bf1-490e-af28-4c5ecec8d5fe"
+}
+
+### Get all appointments
+GET {{host}}/Appointments
+
+### Get upcoming appointments for the doctor
+GET {{host}}/Appointments/doctor
+
+### Get appointments for the patient
+GET {{host}}/Appointments/patient/{{patientId}}
+
+### Compare the appointment
+POST {{host}}/Appointments/{{appointmentId}}/Complete
+
+### Cancel the appointment
+POST {{host}}/Appointments/{{appointmentId}}/Cancel

@@ -18,6 +18,7 @@ public class Appointment
     {
         this.Status = AppointmentStatus.Completed;
     }
+    
 }
 
 public enum AppointmentStatus

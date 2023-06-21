@@ -1,10 +1,8 @@
 namespace doctor_appointment.Contracts.Appointment;
 
-public record CreateAppointmentResponse(
-    Guid Id,
+public record CreateAppointmentRequest(
     Guid SlotId,
-    Guid PatientId,
-    string PatientName,
-    DateTime ReserveAt,
-    string Status
+    Guid PatientId//,
+    // string PatientName,
+    // DateTime ReservedAt
 );
