@@ -3,23 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doctor-appointment.Api", "doctor-appointment.Api\doctor-appointment.Api.csproj", "{11DF8886-9867-4631-A7C2-E242740704E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "doctor-appointment.Api", "doctor-appointment.Api\doctor-appointment.Api.csproj", "{11DF8886-9867-4631-A7C2-E242740704E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doctor-appointment.Application", "doctor-appointment.Application\doctor-appointment.Application.csproj", "{956C2C0C-6606-4CE8-A675-9811C2744CF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "doctor-appointment.Application", "doctor-appointment.Application\doctor-appointment.Application.csproj", "{956C2C0C-6606-4CE8-A675-9811C2744CF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doctor-appointment.Contracts", "doctor-appointment.Contracts\doctor-appointment.Contracts.csproj", "{CEB2ED8E-9154-4E3B-BE0D-BDDD16D6322C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "doctor-appointment.Contracts", "doctor-appointment.Contracts\doctor-appointment.Contracts.csproj", "{CEB2ED8E-9154-4E3B-BE0D-BDDD16D6322C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doctor-appointment.Domain", "doctor-appointment.Domain\doctor-appointment.Domain.csproj", "{73591449-9BDF-4E31-A1AF-9796A7F930B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "doctor-appointment.Domain", "doctor-appointment.Domain\doctor-appointment.Domain.csproj", "{73591449-9BDF-4E31-A1AF-9796A7F930B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doctor-appointment.Infrastructure", "doctor-appointment.Infrastructure\doctor-appointment.Infrastructure.csproj", "{1DA11B28-038A-4837-817C-2166B9E229A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "doctor-appointment.Infrastructure", "doctor-appointment.Infrastructure\doctor-appointment.Infrastructure.csproj", "{1DA11B28-038A-4837-817C-2166B9E229A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doctor-appointment.Tests", "octor-appointment-Tests\doctor-appointment.Tests.csproj", "{E938A6AD-FBE5-43D6-B1E4-3B04CD16F519}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{11DF8886-9867-4631-A7C2-E242740704E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +41,15 @@ Global
 		{1DA11B28-038A-4837-817C-2166B9E229A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DA11B28-038A-4837-817C-2166B9E229A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DA11B28-038A-4837-817C-2166B9E229A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E938A6AD-FBE5-43D6-B1E4-3B04CD16F519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E938A6AD-FBE5-43D6-B1E4-3B04CD16F519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E938A6AD-FBE5-43D6-B1E4-3B04CD16F519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E938A6AD-FBE5-43D6-B1E4-3B04CD16F519}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6994B715-8021-41F3-976A-DCD053502824}
 	EndGlobalSection
 EndGlobal
