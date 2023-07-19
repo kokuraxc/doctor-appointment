@@ -11,7 +11,7 @@ POST {{host}}/Slots
 Content-Type: application/json
 
 {
-    "StartDate": "2023-07-10T10:00:00",
+    "StartDate": "2023-07-18T10:00:00",
     "DoctorName": "doctor Y",
     "IsReserved": false,
     "Cost": 56.782
