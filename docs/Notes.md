@@ -84,3 +84,64 @@ The technologies and libraries that used for each layer.
 5. Add dependenci injection in each project independently with the help from *Microsoft.Extensions.DependencyInjection.Abstractions*.
 
 To trust the certificate run 'dotnet dev-certs https --trust' (Windows and macOS only)
+
+### Add Serilog
+
+1. Add packages
+```bash
+dotnet add .\doctor-appointment.Api\ package Serilog.AspNetCore
+dotnet add .\doctor-appointment.Api\ package Serilog.Sinks.Console
+dotnet add .\doctor-appointment.Api\ package Serilog.Sinks.File 
+```
+2. Add the following section into *appsettings.json*.
+```json
+"Serilog": {
+    "Using": [ "Serilog.Sinks.File", "Serilog.Sinks.Console" ],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "./logs/log-.txt",
+          "rollOnFileSizeLimit": true,
+          "formatter": "Serilog.Formatting.Compact.CompactJsonFormatter,Serilog.Formatting.Compact",
+          "rollingInterval": "Day"
+        }
+      }
+    ],
+    "Enrich": [ "FromLogContext", "WithThreadId", "WithMachineName" ]
+  }
+```
+3. Register the service to the container in *Program.cs*. 
+```cs
+builder.Host.UseSerilog((context, configuration) =>
+	configuration.ReadFrom.Configuration(context.Configuration));
+```
+4. Use the logger, i.e., in *SlotsController.cs*:
+```cs
+private readonly ILogger<SlotsController> _logger;
+
+public SlotsController(ISlotsService slotsService, ILogger<SlotsController> logger)
+{
+	_slotsService = slotsService;
+	_logger = logger;
+}
+
+[Route("")]
+[HttpGet]
+public async Task<IActionResult> GetAllSlotsAsync()
+{
+	_logger.LogInformation("Requesting all slots");
+	var slots = await _slotsService.GetAllSlotsAsync();
+	return Ok(slots);
+}
+```
