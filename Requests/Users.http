@@ -21,5 +21,8 @@ Content-Type: application/json
 
 {
     "Username" : "user_name_123",
-    "Password" : "password_xyz",
+    "Password" : "password_xyz"
 }
+
+###
+POST {{host}}/Users/Logout

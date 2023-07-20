@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using doctor_appointment.Contracts.User;
+using doctor_appointment.Application.Services.Users;
 
 namespace doctor_appointment.Api.Controllers
 {
@@ -8,40 +9,39 @@ namespace doctor_appointment.Api.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+        private readonly IUsersService _usersService;
+
+        public UsersController(IUsersService usersService)
+        {
+            _usersService = usersService;
+        }
 
         [HttpGet("Doctors")]
-        public async Task<IActionResult> GetAllDoctors()
+        public async Task<IActionResult> GetAllDoctorsAsync()
         {
-            return Ok("user 1; user 2; user 3");
+            var doctors = await _usersService.GetAllDoctorsAsync();
+            return Ok(doctors);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterRequest request)
+        public async Task<IActionResult> RegisterAsync(RegisterRequest request)
         {
-            var response = new RegisterResponse(
-                Id: Guid.NewGuid(),
-                Username: request.Username,
-                Password: request.Password,
-                FirstName: request.FirstName,
-                LastName: request.LastName,
-                Role: request.Role
-            );
-
+            var response = await _usersService.RegisterAsync(request);
             return Ok(response);
         }
 
         [HttpPost("Login")]
-        public async Task<IActionResult> Login()
+        public async Task<IActionResult> LoginAsync(LoginRequest request)
         {
-            var response = new LoginResponse(
-                Token: "jwt token");
+            var response = await _usersService.LoginAsync(request);
             return Ok(response);
         }
 
         [HttpPost("Logout")]
-        public async Task<IActionResult> Logout()
+        public async Task<IActionResult> LogoutAsync()
         {
-            return Ok("logout successfully.");
+            var response = await _usersService.LogoutAsync();
+            return Ok(response);
         }
     }
 }

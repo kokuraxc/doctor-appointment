@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "doctor-appointment.Domain",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "doctor-appointment.Infrastructure", "doctor-appointment.Infrastructure\doctor-appointment.Infrastructure.csproj", "{1DA11B28-038A-4837-817C-2166B9E229A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doctor-appointment.Tests", "octor-appointment-Tests\doctor-appointment.Tests.csproj", "{E938A6AD-FBE5-43D6-B1E4-3B04CD16F519}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doctor-appointment.Tests", "doctor-appointment-Tests\doctor-appointment.Tests.csproj", "{E938A6AD-FBE5-43D6-B1E4-3B04CD16F519}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
