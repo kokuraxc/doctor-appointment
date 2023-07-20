@@ -3,6 +3,7 @@ using doctor_appointment.Application.Services.Slots;
 using doctor_appointment.Application.Services.Patients;
 using doctor_appointment.Application.Services.Appointments;
 using doctor_appointment.Application.Services.Users;
+using doctor_appointment.Application.Common;
 
 namespace doctor_appointment.Application;
 
@@ -14,6 +15,7 @@ public static class DependencyInjection
         services.AddScoped<IPatientsService, PatientsService>();
         services.AddScoped<IAppointmentService, AppointmentService>();
         services.AddScoped<IUsersService, UsersService>();
+        services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
         return services;
     }
 }
