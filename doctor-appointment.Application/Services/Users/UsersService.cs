@@ -60,9 +60,4 @@ public class UsersService : IUsersService
                 Token: token);
         return response;
     }
-
-    public async Task<bool> LogoutAsync()
-    {
-        return true;
-    }
 }

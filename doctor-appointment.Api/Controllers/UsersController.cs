@@ -51,12 +51,5 @@ namespace doctor_appointment.Api.Controllers
             var response = await _usersService.LoginAsync(request);
             return Ok(response);
         }
-
-        [HttpPost("Logout")]
-        public async Task<IActionResult> LogoutAsync()
-        {
-            var response = await _usersService.LogoutAsync();
-            return Ok(response);
-        }
     }
 }

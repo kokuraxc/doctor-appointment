@@ -4,24 +4,34 @@
 
 ### Create a new appointment
 POST {{host}}/Appointments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzYWEwYjQ3Mi1mNDhiLTRmNzMtYjBkOC01OWQ3NjFiOTQ3YTkiLCJnaXZlbl9uYW1lIjoiZmlyc3QgbmFtZSIsImZhbWlseV9uYW1lIjoibGFzdCBuYW1lIiwicm9sZSI6IkRvY3RvciIsImV4cCI6MTY4OTg2NDQ0NiwiaXNzIjoiZG9jdG9yLWFwcG9pbnRtZW50LWJvb2tpbmctc3lzdGVtIn0.QvO5WzMcrIJ5VkJRdQr7-PMM0-LL92r-vGiO1zR8gBQ
 Content-Type: application/json
 
 {
-    "SlotId": "af677d4a-8459-433a-ace5-bc7ccae86c95",
+    "SlotId": "e68642f5-0aa7-4e8f-a3b8-fa9bdf146653",
     "PatientId": "63090b84-7bf1-490e-af28-4c5ecec8d5fe"
 }
 
 ### Get all appointments
 GET {{host}}/Appointments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzYWEwYjQ3Mi1mNDhiLTRmNzMtYjBkOC01OWQ3NjFiOTQ3YTkiLCJnaXZlbl9uYW1lIjoiZmlyc3QgbmFtZSIsImZhbWlseV9uYW1lIjoibGFzdCBuYW1lIiwicm9sZSI6IkRvY3RvciIsImV4cCI6MTY4OTg2NDQ0NiwiaXNzIjoiZG9jdG9yLWFwcG9pbnRtZW50LWJvb2tpbmctc3lzdGVtIn0.QvO5WzMcrIJ5VkJRdQr7-PMM0-LL92r-vGiO1zR8gBQ
+
 
 ### Get upcoming appointments for the doctor
 GET {{host}}/Appointments/doctor
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzYWEwYjQ3Mi1mNDhiLTRmNzMtYjBkOC01OWQ3NjFiOTQ3YTkiLCJnaXZlbl9uYW1lIjoiZmlyc3QgbmFtZSIsImZhbWlseV9uYW1lIjoibGFzdCBuYW1lIiwicm9sZSI6IkRvY3RvciIsImV4cCI6MTY4OTg2NDQ0NiwiaXNzIjoiZG9jdG9yLWFwcG9pbnRtZW50LWJvb2tpbmctc3lzdGVtIn0.QvO5WzMcrIJ5VkJRdQr7-PMM0-LL92r-vGiO1zR8gBQ
+
 
 ### Get appointments for the patient
 GET {{host}}/Appointments/patient/{{patientId}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzYWEwYjQ3Mi1mNDhiLTRmNzMtYjBkOC01OWQ3NjFiOTQ3YTkiLCJnaXZlbl9uYW1lIjoiZmlyc3QgbmFtZSIsImZhbWlseV9uYW1lIjoibGFzdCBuYW1lIiwicm9sZSI6IkRvY3RvciIsImV4cCI6MTY4OTg2NDQ0NiwiaXNzIjoiZG9jdG9yLWFwcG9pbnRtZW50LWJvb2tpbmctc3lzdGVtIn0.QvO5WzMcrIJ5VkJRdQr7-PMM0-LL92r-vGiO1zR8gBQ
+
 
 ### Compare the appointment
 POST {{host}}/Appointments/{{appointmentId}}/Complete
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzYWEwYjQ3Mi1mNDhiLTRmNzMtYjBkOC01OWQ3NjFiOTQ3YTkiLCJnaXZlbl9uYW1lIjoiZmlyc3QgbmFtZSIsImZhbWlseV9uYW1lIjoibGFzdCBuYW1lIiwicm9sZSI6IkRvY3RvciIsImV4cCI6MTY4OTg2NDQ0NiwiaXNzIjoiZG9jdG9yLWFwcG9pbnRtZW50LWJvb2tpbmctc3lzdGVtIn0.QvO5WzMcrIJ5VkJRdQr7-PMM0-LL92r-vGiO1zR8gBQ
+
 
 ### Cancel the appointment
 POST {{host}}/Appointments/{{appointmentId}}/Cancel
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzYWEwYjQ3Mi1mNDhiLTRmNzMtYjBkOC01OWQ3NjFiOTQ3YTkiLCJnaXZlbl9uYW1lIjoiZmlyc3QgbmFtZSIsImZhbWlseV9uYW1lIjoibGFzdCBuYW1lIiwicm9sZSI6IkRvY3RvciIsImV4cCI6MTY4OTg2NDQ0NiwiaXNzIjoiZG9jdG9yLWFwcG9pbnRtZW50LWJvb2tpbmctc3lzdGVtIn0.QvO5WzMcrIJ5VkJRdQr7-PMM0-LL92r-vGiO1zR8gBQ

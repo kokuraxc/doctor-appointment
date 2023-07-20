@@ -2,10 +2,12 @@ using System.Diagnostics.Contracts;
 using doctor_appointment.Application.Services.Appointments;
 using doctor_appointment.Contracts.Appointment;
 using doctor_appointment.Domain.IRepositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace doctor_appointment.Api.Controllers;
 
+[Authorize]
 [Route("[controller]")]
 [ApiController]
 public class AppointmentsController : ControllerBase

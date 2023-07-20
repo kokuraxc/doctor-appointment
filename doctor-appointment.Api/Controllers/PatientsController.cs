@@ -1,9 +1,11 @@
 using doctor_appointment.Application.Services.Patients;
 using doctor_appointment.Contracts.Patient;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace doctor_appointment.Api.Controllers;
 
+[Authorize]
 [Route("[controller]")]
 [ApiController]
 public class PatientsController : ControllerBase
