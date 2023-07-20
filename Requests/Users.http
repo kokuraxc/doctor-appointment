@@ -1,0 +1,25 @@
+@host=http://localhost:5250
+
+### Get all users
+GET {{host}}/Users/Doctors
+
+### Register new user
+POST {{host}}/Users
+Content-Type: application/json
+
+{
+    "Username" : "user_name_123",
+    "Password" : "password_xyz",
+    "FirstName" : "123",
+    "LastName" : "Patient",
+    "Role": 1 
+}
+
+###
+POST {{host}}/Users/Login
+Content-Type: application/json
+
+{
+    "Username" : "user_name_123",
+    "Password" : "password_xyz",
+}
