@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using doctor_appointment.Contracts.User;
 using doctor_appointment.Application.Services.Users;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace doctor_appointment.Api.Controllers
 {
@@ -10,15 +12,28 @@ namespace doctor_appointment.Api.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUsersService _usersService;
+        private readonly ILogger<UsersController> _logger;
 
-        public UsersController(IUsersService usersService)
+        public UsersController(IUsersService usersService, ILogger<UsersController> logger)
         {
             _usersService = usersService;
+            _logger = logger;
         }
 
+        [Authorize]
         [HttpGet("Doctors")]
         public async Task<IActionResult> GetAllDoctorsAsync()
         {
+            var role = User.Claims.Where(c => c.Type.Contains( "role")).Select(c => c.Value).FirstOrDefault();
+            _logger.LogInformation("Role is {UserRole}", role);
+            foreach (var claim in User.Claims)
+            {
+                _logger.LogInformation(claim.Type);
+                _logger.LogInformation(claim.ToString());
+            }
+
+            //_logger.LogInformation(User.Identity.);
+
             var doctors = await _usersService.GetAllDoctorsAsync();
             return Ok(doctors);
         }
