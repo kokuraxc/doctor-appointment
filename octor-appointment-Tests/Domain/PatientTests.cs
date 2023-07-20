@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace doctor_appointment_Tests.Domain
 {
-    internal class DoctorTests
+    internal class PatientTests
     {
         [SetUp]
         public void Setup()
@@ -21,14 +21,13 @@ namespace doctor_appointment_Tests.Domain
             var lastName = "Last";
             var username = "username";
             var password = "password";
-            var doctor = new Doctor(username, password, firstName, lastName);
-            Assert.IsNotNull(doctor.Id);
-            Assert.That(doctor.FirstName, Is.EqualTo(firstName));
-            Assert.That(doctor.LastName, Is.EqualTo(lastName));
-            Assert.That(doctor.Username, Is.EqualTo(username));
-            Assert.That(doctor.Password, Is.EqualTo(password));
-            Assert.That(doctor.Slots, Is.Empty);
-            Assert.That(doctor.Appointments, Is.Empty);
+            var patient = new Patient(username, password, firstName, lastName);
+            Assert.IsNotNull(patient.Id);
+            Assert.That(patient.FirstName, Is.EqualTo(firstName));
+            Assert.That(patient.LastName, Is.EqualTo(lastName));
+            Assert.That(patient.Username, Is.EqualTo(username));
+            Assert.That(patient.Password, Is.EqualTo(password));
+            Assert.That(patient.Appointments, Is.Empty);
         }
 
         [Test]
@@ -38,49 +37,49 @@ namespace doctor_appointment_Tests.Domain
             var password = "password";
             var firstName = "";
             var lastName = "Last";
-            Assert.Throws<ArgumentNullException>(() => new Doctor(username, password, firstName, lastName));
+            Assert.Throws<ArgumentNullException>(() => new Patient(username, password, firstName, lastName));
 
             username = "username";
             password = "password";
             firstName = null;
             lastName = "Last";
-            Assert.Throws<ArgumentNullException>(() => new Doctor(username, password, firstName, lastName));
+            Assert.Throws<ArgumentNullException>(() => new Patient(username, password, firstName, lastName));
 
             username = "username";
             password = "password";
             firstName = "First";
             lastName = "";
-            Assert.Throws<ArgumentNullException>(() => new Doctor(username, password, firstName, lastName));
+            Assert.Throws<ArgumentNullException>(() => new Patient(username, password, firstName, lastName));
 
             username = "username";
             password = "password";
             firstName = "First";
             lastName = null;
-            Assert.Throws<ArgumentNullException>(() => new Doctor(username, password, firstName, lastName));
+            Assert.Throws<ArgumentNullException>(() => new Patient(username, password, firstName, lastName));
 
             username = "";
             password = "password";
             firstName = "First";
             lastName = "Last";
-            Assert.Throws<ArgumentNullException>(() => new Doctor(username, password, firstName, lastName));
+            Assert.Throws<ArgumentNullException>(() => new Patient(username, password, firstName, lastName));
 
             username = null;
             password = "password";
             firstName = "First";
             lastName = "Last";
-            Assert.Throws<ArgumentNullException>(() => new Doctor(username, password, firstName, lastName));
+            Assert.Throws<ArgumentNullException>(() => new Patient(username, password, firstName, lastName));
 
             username = "username";
             password = "";
             firstName = "First";
             lastName = "Last";
-            Assert.Throws<ArgumentNullException>(() => new Doctor(username, password, firstName, lastName));
+            Assert.Throws<ArgumentNullException>(() => new Patient(username, password, firstName, lastName));
 
             username = "username";
             password = null;
             firstName = "First";
             lastName = "Last";
-            Assert.Throws<ArgumentNullException>(() => new Doctor(username, password, firstName, lastName));
+            Assert.Throws<ArgumentNullException>(() => new Patient(username, password, firstName, lastName));
         }
     }
 }
