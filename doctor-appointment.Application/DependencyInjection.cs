@@ -3,12 +3,13 @@ using Microsoft.Extensions.Configuration;
 using doctor_appointment.Application.Services.Slots;
 using doctor_appointment.Application.Services.Patients;
 using doctor_appointment.Application.Services.Appointments;
-using doctor_appointment.Application.Services.Users;
 using doctor_appointment.Application.Common;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.Extensions.Options;
+using MediatR;
+using System.Reflection;
 
 namespace doctor_appointment.Application;
 
@@ -22,7 +23,8 @@ public static class DependencyInjection
         services.AddScoped<ISlotsService, SlotsService>();
         services.AddScoped<IPatientsService, PatientsService>();
         services.AddScoped<IAppointmentService, AppointmentService>();
-        services.AddScoped<IUsersService, UsersService>();
+        // services.AddMediatR(typeof(DependencyInjection).Assembly);
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
         return services;
     }

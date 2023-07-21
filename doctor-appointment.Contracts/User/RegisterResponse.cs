@@ -13,6 +13,6 @@ namespace doctor_appointment.Contracts.User
         string Password,
         string FirstName,
         string LastName,
-        UserRole Role
+        string Role
     );
 }

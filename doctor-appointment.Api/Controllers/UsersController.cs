@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using doctor_appointment.Contracts.User;
-using doctor_appointment.Application.Services.Users;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using MediatR;
+using doctor_appointment.Application.Commands;
 
 namespace doctor_appointment.Api.Controllers
 {
@@ -11,45 +12,46 @@ namespace doctor_appointment.Api.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly IUsersService _usersService;
+        private readonly IMediator _mediator;
         private readonly ILogger<UsersController> _logger;
 
-        public UsersController(IUsersService usersService, ILogger<UsersController> logger)
+        public UsersController(ILogger<UsersController> logger, IMediator mediator)
         {
-            _usersService = usersService;
             _logger = logger;
+            _mediator = mediator;
         }
 
         [Authorize]
         [HttpGet("Doctors")]
         public async Task<IActionResult> GetAllDoctorsAsync()
         {
-            var role = User.Claims.Where(c => c.Type.Contains( "role")).Select(c => c.Value).FirstOrDefault();
+            var command = new GetAllDoctorsCommand();
+            var result = await _mediator.Send(command);
+            return Ok(result);
+
+            var role = User.Claims.Where(c => c.Type.Contains("role")).Select(c => c.Value).FirstOrDefault();
             _logger.LogInformation("Role is {UserRole}", role);
             foreach (var claim in User.Claims)
             {
                 _logger.LogInformation(claim.Type);
                 _logger.LogInformation(claim.ToString());
             }
-
-            //_logger.LogInformation(User.Identity.);
-
-            var doctors = await _usersService.GetAllDoctorsAsync();
-            return Ok(doctors);
         }
 
         [HttpPost]
         public async Task<IActionResult> RegisterAsync(RegisterRequest request)
         {
-            var response = await _usersService.RegisterAsync(request);
-            return Ok(response);
+            var command = new RegisterCommand(request.Username, request.Password, request.FirstName, request.LastName, request.Role);
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
 
         [HttpPost("Login")]
         public async Task<IActionResult> LoginAsync(LoginRequest request)
         {
-            var response = await _usersService.LoginAsync(request);
-            return Ok(response);
+            var command = new LoginCommand(request.Username, request.Password);
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
     }
 }

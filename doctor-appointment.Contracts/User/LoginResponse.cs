@@ -8,6 +8,10 @@ namespace doctor_appointment.Contracts.User
 {
     public record LoginResponse
     (
+        string Username,
+        string FirstName,
+        string LastName,
+        string Role,
         string Token
     );
 }
