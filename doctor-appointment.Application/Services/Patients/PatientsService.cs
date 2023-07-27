@@ -15,11 +15,12 @@ public class PatientsService : IPatientsService
 
     public async Task<CreatePatientResponse> CreatePatientAsync(CreatePatientRequest request)
     {
-        Patient patient = new()
-        {
-            FirstName = request.FirstName,
-            LastName = request.LastName
-        };
+        Patient patient = new Patient(
+             "username",
+             "password",
+             request.FirstName,
+             request.LastName
+        );
         patient = await _patientRepository.AddAsync(patient);
         return new CreatePatientResponse(patient.Id, patient.FirstName, patient.LastName);
     }

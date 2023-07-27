@@ -1,9 +1,11 @@
 using doctor_appointment.Application.Services.Slots;
 using doctor_appointment.Contracts.Slot;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace doctor_appointment.Api.Controllers;
 
+[Authorize]
 [Route("[controller]")]
 [ApiController]
 public class SlotsController : ControllerBase

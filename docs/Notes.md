@@ -145,3 +145,9 @@ public async Task<IActionResult> GetAllSlotsAsync()
 	return Ok(slots);
 }
 ```
+
+### Set up User Secrets
+
+1. Init: `dotnet user-secrets init --project .\doctor-appointment.Api\`
+2. Add a secret: `dotnet user-secrets set "JwtSettings:Secret" "THE-SECRET-COMES-HERE" --project .\doctor-appointment.Api\`
+3. To list secrets associated with the project: `dotnet user-secrets list --project .\doctor-appointment.Api\`

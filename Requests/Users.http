@@ -1,0 +1,27 @@
+@host=http://localhost:5250
+
+### Get all users
+GET {{host}}/Users/Doctors
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYzQ4ODdlMy00ZmY2LTQ2YTMtYWMxYi05MmQ2ZGYwYTZiMDMiLCJnaXZlbl9uYW1lIjoiZmlyc3QgbmFtZSIsImZhbWlseV9uYW1lIjoibGFzdCBuYW1lIiwicm9sZSI6IkRvY3RvciIsImV4cCI6MTY4OTkxMDI0MiwiaXNzIjoiZG9jdG9yLWFwcG9pbnRtZW50LWJvb2tpbmctc3lzdGVtIn0.Ug6x30jDHeodidaHw4J9GipODXuUSFBp2VAsVKJFP_A
+
+
+### Register new user
+POST {{host}}/Users
+Content-Type: application/json
+
+{
+    "Username" : "user_name_123",
+    "Password" : "password_xyz",
+    "FirstName" : "123",
+    "LastName" : "Patient ABC",
+    "Role": 1 
+}
+
+###
+POST {{host}}/Users/Login
+Content-Type: application/json
+
+{
+    "Username" : "user_name_1",
+    "Password" : "password_xyz"
+}
